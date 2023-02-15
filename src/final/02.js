@@ -66,7 +66,9 @@ function PokemonInfo({pokemonName}) {
     },
     {status: pokemonName ? 'pending' : 'idle'},
     [pokemonName],
-  )
+  ) // useAsync 함수를 이용해 콜백, 초기값, 의존성을 넘겨서
+  // 의존성이 변할때만 함수를 바꿔주도록 메모이제이션함
+  // useReducer로 구현하니까 구조가 넘 복잡ㅜㅜ
 
   const {data: pokemon, status, error} = state
 
