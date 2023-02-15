@@ -35,6 +35,7 @@ function useAsync(asyncCallback, initialState) {
     error: null,
     ...initialState,
   })
+  
   React.useEffect(() => {
     const promise = asyncCallback()
     if (!promise) {
